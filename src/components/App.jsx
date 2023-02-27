@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
-import { Notification } from './Notification/Notification';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 import { GlobalStyles } from './GlobalStyles';
 
 export class App extends Component {
@@ -45,13 +45,14 @@ export class App extends Component {
 
     return Math.round((this.state.good * 100) / value);
   }
+
   render() {
     return (
       <div>
         <GlobalStyles />
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.handleBtnClick}
           />
         </Section>

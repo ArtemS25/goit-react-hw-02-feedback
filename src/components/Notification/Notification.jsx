@@ -4,9 +4,9 @@ import { Message } from './Notification.styled';
 
 export const Notification = ({ message }) => {
   return (
-    <Fragment>
+    <>
       <Message>{message}</Message>
-    </Fragment>
+    </>
   );
 };
 

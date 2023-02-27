@@ -4,19 +4,19 @@ import { Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <Fragment>
-      {Object.keys(options).map(key => {
+    <>
+      {options.map(key => {
         return (
           <Button type="button" key={key} onClick={onLeaveFeedback}>
             {key}
           </Button>
         );
       })}
-    </Fragment>
+    </>
   );
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.objectOf(PropTypes.number).isRequired,
+  options: PropTypes.array.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };

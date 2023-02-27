@@ -10,13 +10,13 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <Fragment>
+    <>
       <Info>Good: {good}</Info>
       <Info>Neutral: {neutral}</Info>
       <Info>Bad: {bad}</Info>
       <Info>Total: {total}</Info>
       <Info>Positive feedback: {positivePercentage}%</Info>
-    </Fragment>
+    </>
   );
 };
 
